@@ -1,0 +1,519 @@
+<!-- 
+  The Apache License, Version 2.0 (the "License");
+
+  Copyright 2015 Svyatoslav Kovtun
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="Rebecca">
+  <meta name="application-name" content="Rebecca">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#fff">
+  <title>Rebecca</title>
+
+  <!-- JQUERY -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="//code.jquery.com/ui/jquery-ui-git.js"></script>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- FONTS -->
+  <link href='//fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/jumbotron.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/adverts.css">
+  <link rel="stylesheet" href="/css/footer.css">
+
+  <script src="/js/script.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/img/favicons/manifest.json">
+  <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+</head>
+<body>
+
+  <!-- WEBSITE JAMBOTRON -->
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="jumbotron-black">
+
+        <span class="jumbotron-logo"></span>
+        <h1 class="jumbotron-title">Welcome</h1>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SEARCH PANEL -->
+  <div class="container-fluid main-navbar">
+    <div class="navbar-container">
+      <nav class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-header">
+          <button class="navbar-toggle quick_search" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Quick Search</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Country, Region, City or Postal Code" required>
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </form>
+
+          <form class="navbar-form navbar-right">
+            <button class="btn btn-primary float-right quick_search" type="button">
+              Advanced Search
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </form>
+
+        </div>
+      </nav>
+
+      <!-- Drop-Down MENU -->
+      <div class="dropdown-navbar">
+        <div class="row">
+
+          <!-- Currency -->
+          <div class="col-sm-3">
+            <b class="dr-navbar-title">Currency</b>
+            <div class="btn-group full-width">
+              <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                <span class="float-left">$ USD</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu full-width" role="menu">
+                <li><a href="#">$ USD</a></li>
+                <li><a href="#">€ EUR</a></li>
+                <li><a href="#">¥ CNY</a></li>
+                <li><a href="#">₴ UAH</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Property Type -->
+          <div class="col-sm-3">
+            <b class="dr-navbar-title">Property Type</b>
+            <div class="btn-group full-width">
+              <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                <span class="float-left">Any</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu full-width" role="menu">
+                <li><a href="#">Any</a></li>
+                <li><a href="#">Apartment</a></li>
+                <li><a href="#">Cottage</a></li>
+                <li><a href="#">Farm</a></li>
+                <li><a href="#">Land</a></li>
+                <li><a href="#">Commercial property</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Price Min -->
+          <div class="col-sm-3">
+            <div style="width: 50%; float: left">
+              <b class="dr-navbar-title">Price Min</b>
+              
+              <div class="btn-group full-width">
+                <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                  <span class="float-left">Min</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu full-width" role="menu">
+                  <li><a href="#">Min</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">1K</a></li>
+                  <li><a href="#">2K</a></li>
+                  <li><a href="#">5K</a></li>
+                  <li><a href="#">10K</a></li>
+                  <li><a href="#">20K</a></li>
+                  <li><a href="#">50K</a></li>
+                  <li><a href="#">100K+</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Price Max -->
+            <div style="width: 50%; float: left">
+              <b class="dr-navbar-title">Price Max</b>
+
+              <div class="btn-group" style="width: 100%;">
+                <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                  <span class="float-left">Max</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu full-width" role="menu">
+                  <li><a href="#">Max</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">100K+</a></li>
+                  <li><a href="#">50K</a></li>
+                  <li><a href="#">20K</a></li>
+                  <li><a href="#">10K</a></li>
+                  <li><a href="#">5K</a></li>
+                  <li><a href="#">2K</a></li>
+                  <li><a href="#">1K</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- /.col-sm-3 -->
+
+          <!-- Sale / Rent buttons -->
+          <div class="col-sm-3">
+            <b class="dr-navbar-title">Property status</b>
+            <div class="btn-group full-width" role="group" aria-label="...">
+              <button class="btn btn-default" style="float: left; width: 50%">For Sale</button>
+              <button class="btn btn-default" style="float: right; width: 50%">Rentails</button>
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+        <div class="row">
+
+          <!-- Rooms -->
+          <div class="col-sm-3">
+            <b class="v-title">Rooms</b>
+            <div class="btn-group full-width">
+              <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                <span class="float-left">Any</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu full-width" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6+</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Date Posted -->
+          <div class="col-sm-3">
+            <b class="dr-navbar-title">Date Posted</b>
+            <div class="btn-group full-width">
+              <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                <span class="float-left">Any</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu full-width" role="menu">
+                <li><a href="#">Today</a></li>
+                <li><a href="#">Within 1 week</a></li>
+                <li><a href="#">Within 2 weeks</a></li>
+                <li><a href="#">Within 1 month</a></li>
+                <li><a href="#">Within 6 month</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Sq Min / Max -->
+          <div class="col-sm-3">
+            <div style="width: 50%; float: left">
+              <b class="dr-navbar-title">Sq.M. Min</b>
+
+              <div class="btn-group full-width" style="float: left">
+                <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                  <span class="float-left">Min</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu full-width" role="menu">
+                  <li><a href="#">Min</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">20</a></li>
+                  <li><a href="#">40</a></li>
+                  <li><a href="#">60</a></li>
+                  <li><a href="#">80</a></li>
+                  <li><a href="#">100</a></li>
+                  <li><a href="#">200</a></li>
+                  <li><a href="#">500+</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 50%; float: right">
+              <b class="dr-navbar-title">Sq.M. Max</b>
+
+              <div class="btn-group full-width">
+                <button type="button" class="btn btn-default dropdown-toggle dr-navbar-button full-width" data-toggle="dropdown" aria-expanded="false">
+                  <span class="float-left">Max</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu full-width" role="menu">
+                  <li><a href="#">Max</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">500+</a></li>
+                  <li><a href="#">200</a></li>
+                  <li><a href="#">100</a></li>
+                  <li><a href="#">80</a></li>
+                  <li><a href="#">60</a></li>
+                  <li><a href="#">40</a></li>
+                  <li><a href="#">20</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- /.col-sm-3 -->
+
+          <!-- Reset / Search buttons -->
+          <div class="col-sm-3">
+            <b class="dr-navbar-title">Search it!</b>
+            <div class="btn-group full-width" role="group" aria-label="...">
+              <button class="btn btn-default" style="float: left; width: 50%">Reset</button>
+              <button class="btn btn-primary" style="float: right; width: 50%">Search</button>
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div> <!-- /.drop-down -->
+    </div> <!-- /.navbar-container -->
+  </div> <!-- /.main-navbar -->
+
+
+  <!-- ARTICLES CONTAINER -->
+  <div class="container-fluid">
+    <div class="row row-advert">
+
+      <div class="col-sm-3 advert">
+        <div class="advert-body">
+          <img class="img-responsive" src="img/homes/home-1.jpg" alt="home-1" data-toggle="modal" data-target="#myModal">
+          
+          <p class="advert-title">Bedroom Apartment</p>
+          <p class="square">22m<sup>2</sup></p>
+          <hr>
+          <p>35 Picton St London, ON N6B 2L9 Canada</p>
+          <!-- <p>1 519 5854525</p> -->
+          <a href="tel:15195854525">+1 (519) 585 45 25</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">358</span>
+              <span class="advert-per-date">/mo.</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-sm-3 advert">
+        <div class="advert-body">
+          <img class="img-responsive" src="img/homes/home-2.jpg" alt="home-2" data-toggle="modal" data-target="#myModal">
+          
+          <p class="advert-title">Bedroom Apartment</p>
+          <p class="square">22m<sup>2</sup></p>
+          <hr>
+          <p>35 Picton St London, ON N6B 2L9 Canada</p>
+          <!-- <p>1 519 5854525</p> -->
+          <a href="tel:15195854525">+1 (519) 585 45 25</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">48</span>
+              <span class="advert-per-date">/day</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 advert">
+        <div class="advert-body">
+          <img class="img-responsive adverd_image" src="img/homes/home-3.jpg" alt="home-3">
+
+          <p class="advert-title">Four-apartment</p>
+          <p class="square">42m<sup>2</sup></p>
+          <hr>
+          <p>504 Maitland St London, ON N6B 2Z6 Canada</p>
+          <a href="tel:15195854525">+1 (519) 655 84 30</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">87</span>
+              <span class="advert-per-date">/day</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 advert">
+        <div class="advert-body">
+          <img class="img-responsive adverd_image" src="img/homes/home-4.jpg" alt="home-4">
+
+          <p class="advert-title">Four-apartment</p>
+          <p class="square">55m<sup>2</sup></p>
+          <hr>
+          <p>570 Princess Ave London, ON N6B 2B9 Canada</p>
+          <a href="tel:15195854525">+1 (519) 959 20 03</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">425</span>
+              <span class="advert-per-date">/mo.</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.row -->
+    <div class="row row-advert">
+
+      <div class="col-xs-12 col-sm-4 advert">
+        <div class="advert-body">
+          <img class="img-responsive adverd_image" src="img/homes/home-5.jpg" alt="home-5">
+
+          <p class="advert-title">One bedroom apartment</p>
+          <p class="square">38m<sup>2</sup></p>
+          <hr>
+          <p>716 William St London, ON N5Y 2R4 Canada</p>
+          <a href="tel:15195854525">+1 (519) 520 54 20</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">350</span>
+              <span class="advert-per-date">/mo.</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 advert">
+        <div class="advert-body">
+          <img class="img-responsive adverd_image" src="img/homes/home-6.jpg" alt="home-6">
+
+          <p class="advert-title">Four-apartment</p>
+          <p class="square">70m<sup>2</sup></p>
+          <hr>
+          <p>28 Alfred St London, ON N5Y 2P4 Canada</p>
+          <a href="tel:15195854525">+1 (519) 123 45 67</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">150</span>
+              <span class="advert-per-date">/day</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 advert">
+        <div class="advert-body">
+          <img class="img-responsive adverd_image" src="img/homes/home-7.jpg" alt="home-7">
+
+          <p class="advert-title">Tree-apartment</p>
+          <p class="square">49m<sup>2</sup></p>
+          <hr>
+          <p>563 Piccadilly St London, ON N5Y 3G9 Canada</p>
+          <a href="tel:15195854525">+1 (519) 543 67 89</a>
+
+          <div class="advert-footer">
+
+            <p class="advert-block-price">
+              <span class="advert-dollar">$</span><span class="advert-price">502</span>
+              <span class="advert-per-date">/mo.</span>
+            </p>
+
+            <input type="button" class="btn btn-default advert-button" value="View »"></input>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.row -->
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="container-fluid footer-container">
+    <div class="row">
+
+      <!-- Social medias icons -->
+      <ul class="footer-ul">
+        <li><img class="socmed socmed-fb" src="/img/social_media/fb_icon.svg" alt="fb"></li>
+        <li><img class="socmed socmed-gp" src="/img/social_media/gp_icon.svg" alt="gp"></li>
+        <li><img class="socmed socmed-tw" src="/img/social_media/tw_icon.svg" alt="tw"></li>
+        <li><img class="socmed socmed-yu" src="/img/social_media/yu_icon.svg" alt="yu"></li>
+      </ul>
+
+      <!-- Footers links -->
+      <ul class="footer-ul">
+        <li><a class="footer-link" href="#">HOME</a></li>
+        <li><a class="footer-link" href="#">MENU</a></li>
+        <li><a class="footer-link" href="#">STORY</a></li>
+        <li><a class="footer-link" href="#">DETOX</a></li>
+        <li><a class="footer-link" href="#">LOCATIONS</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- 50% Transparent background for drop-down navbar  -->
+  <div class="background-black"></div>
+
+</body>
+</html>

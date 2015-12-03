@@ -1,0 +1,98 @@
+/**
+ * @package css
+ * @author Svyatik Kovtun <barsic.plus@gmail.com>
+ * @license The Apache License, Version 2.0
+ * @copyright Copyright 2015 by Svyatoslav Kovtun
+ */
+
+.main-navbar {
+  height: 50px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-container {
+  border: none;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  z-index: 100;
+}
+
+.navbar-container .navbar {
+  border-radius: 0;
+  margin: 0;
+  z-index: 100;
+
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+     -moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+          box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+}
+
+.navbar-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/**
+ * Style for dropdown menu
+ * @section dropdown-navbar
+ */
+.dropdown-navbar {
+  background-color: white;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  opacity: 0;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+
+  -webkit-transform-origin: top;
+     -moz-transform-origin: top;
+          transform-origin: top;
+
+  -webkit-transform: perspective(250px) rotateX(-90deg);
+     -moz-transform: perspective(250px) rotateX(-90deg);
+          transform: perspective(250px) rotateX(-90deg);
+
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+          transition: all .5s;
+
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+     -moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+          box-shadow: 0 2px 2px 1px rgba(0,0,0,0.28);
+}
+
+/**
+ * Class for visible navbar
+ * @subsection dropdown-open
+ */
+.dropdown-open {
+  opacity: 1;
+
+  -webkit-transform: rotateX(0);
+     -moz-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.dr-navbar-title {
+  color: #888;
+  font-size: .9em;
+  margin: 0;
+  margin-left: 5px;
+}
+.dr-navbar-button {
+  text-align: right;
+}
+
+@media screen and (max-width: 770px) {
+  .dropdown-navbar {
+    width: 100%;
+  }
+}

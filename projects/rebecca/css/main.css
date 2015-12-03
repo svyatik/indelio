@@ -1,0 +1,49 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #ededed;
+}
+
+.container-fluid,
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Other CSS rules 
+ */
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.background-black {
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: #000;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    padding: 0;
+  }
+
+  .container {
+    width: auto;
+  }
+}

@@ -1,0 +1,616 @@
+<!--
+Copyright © InDeLIO - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+Written by InDeLIO info@indelio.com, November 2015
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The New, Modern It Company">
+  <meta name="keywords" content="website design, website developer, administration, application development, logo design, brochure design,
+  seo, hosting, linux, windows, php, javascript, js, html, css, mysql, wordpress, joomla">
+  <meta name="author" content="InDeLIO">
+
+  <title>InDeLIO</title>
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="//indelio.com.ua/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="//indelio.com.ua/favicon.ico" type="image/x-icon">
+
+  <!-- JQuery Libraries -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+  <!-- Include Bootstrap Libraries -->
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- External Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic-ext' rel='stylesheet'>
+
+  <!-- Libraries for smooth scrolling -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" ></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+  <!-- Library for filter portfolio -->
+  <script src="js/jquery.mixitup.min.js"></script>
+
+  <!-- Include lib for animation -->
+  <script src="js/wow.min.js"></script>
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Include main CSS and JS files -->
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/script.js"></script>
+
+  <!-- Main CSS and JS files -->
+  <link rel="stylesheet" href="css/lightslider.min.css">
+  <script src="js/lightslider.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="favicon/manifest.json">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#0086ad">
+  <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#fff">
+</head>
+
+<body>
+
+  <!-- WEBSITE PRELOADER -->
+  <!-- Shows an animation until the site is not completely loaded -->
+  <!-- <div class="preloader">
+    <div class="preloader-block"></div>
+  </div> -->
+
+  <div class="page-background">
+
+    <div class="contact-form">
+      <h3>
+        <span class="contact-form-title"></span>
+        <span class="contact-form-close"></span>
+      </h3>
+      <form action="mail.php">
+        <input class="form-control" id="feedName" type="text" placeholder="Ваше ім’я" tabindex="1" required>
+        <input class="form-control" id="feedEmail" type="email" placeholder="Ваш e-mail" tabindex="2" required>
+        <input class="form-control" id="feedPhone" type="phone" placeholder="Ваш телефон" tabindex="3" required>
+        <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" rows="6" placeholder="Якщо хочете, добавте коротеньке повідомлення" tabindex="4" required>Привіт.</textarea>
+        <a class="lnb close-button" style="display: inline-block; width: 250px">
+          <span class="lnb-line lnb-line-left"></span>
+          <span class="lnb-line lnb-line-top"></span>
+          <span class="lnb-line lnb-line-right"></span>
+          <span class="lnb-line lnb-line-bottom"></span>
+          Надіслати нам
+        </a>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- MAIN WEBSITE NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top navbar-main">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home"><img src="img/logo_text.svg" alt></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li class="active"><a href="#home">Home</a></li> -->
+          <li class="active"><a href="#features">Про нас</a></li>
+          <li><a href="#testimonials">Відгуки</a></li>
+          <li><a href="#portfolio">Портфоліо</a></li>
+          <!-- <li><a href="#counter">Діяльність</a></li> -->
+          <li><a href="#pricing">Ціни</a></li>
+          <li><a href="#feedback">Зв'язок</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- WEBSITE HOME SECTION -->
+  <section class="background website-header" style="background: url('img/background-min.png') no-repeat center 0 fixed; position: relative" id="home">
+    <div class="header-text">
+      <img class="wow bounceInDown" src="img/logo_text.svg" alt>
+      <h1 class="header-title wow bounceInDown">Ми робимо інакше! Ми робимо краще!</h1>
+      <div class="container header-button-container" style="max-width: 1000px !important;">
+        <div class="row">
+
+          <div class="col-sm-4 header-button wow bounceInUp">
+            <img src="img/rocket.svg" alt>
+            <a class="lnb" href="#features">
+              <span class="lnb-line lnb-line-left"></span>
+              <span class="lnb-line lnb-line-top"></span>
+              <span class="lnb-line lnb-line-right"></span>
+              <span class="lnb-line lnb-line-bottom"></span>
+              Про нас
+            </a>
+          </div>
+
+          <div class="col-sm-4 header-button wow bounceInUp">
+            <img src="img/diamond.svg" alt>
+            <a class="lnb" href="#portfolio">
+              <span class="lnb-line lnb-line-left"></span>
+              <span class="lnb-line lnb-line-top"></span>
+              <span class="lnb-line lnb-line-right"></span>
+              <span class="lnb-line lnb-line-bottom"></span>
+              Наші проекти
+            </a>
+          </div>
+
+          <div class="col-sm-4 header-button wow bounceInUp">
+            <img src="img/map.svg" alt>
+            <a class="lnb" href="#feedback">
+              <span class="lnb-line lnb-line-left"></span>
+              <span class="lnb-line lnb-line-top"></span>
+              <span class="lnb-line lnb-line-right"></span>
+              <span class="lnb-line lnb-line-bottom"></span>
+              Контакти
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <h1 class="header-title wow fadeInDown" data-wow-delay="1s">it-soul</h1>
+      <h2 class="wow fadeInDown" data-wow-delay="1s">The New, Modern It Company</h2>
+      <div class="line"></div>
+      <h3 class="header-about wow fadeInUp" data-wow-delay="1s">
+        <span>We are an offshore software development company from the heart of Lviv.</span>
+        <span>We create outstanding websites, creative concepts, user-friendly software and vibrant identities</span>
+      </h3> -->
+      <!-- <a class="it wow fadeInUp" data-wow-delay="1s" href="#contact">CONTACT WITH US</a> -->
+    </div>
+    <!-- <a class="arrow" href="#features"></a> -->
+  </section>
+
+  <div>
+    <!-- <h2 class="start">The new age in The site building</h2> -->
+<div class="container-fluid features-fluid" id="features">
+  <h1>The new age in the site building</h1>
+    <div class="container features">
+      <div class="row-full">
+
+        <div class="col-sm-6 center wow fadeInLeft">
+          <img class="img-responsive" src="img/about/website_design.svg" alt>
+        </div>
+        <div class="col-sm-6 wow fadeInRight">
+          <h1>Створення сайтів</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
+          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
+        </div>
+
+
+        <div class="col-sm-6 col-md-push-6 center wow fadeInRight">
+          <img class="img-responsive" src="https://foxxr.com/wp-content/uploads/2012/09/best-seo-agencies-awards.png" alt>
+        </div>
+        <div class="col-sm-6 col-md-pull-6 wow fadeInLeft">
+          <h1>СЕО та Просування</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
+          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
+        </div>
+
+
+        <div class="col-sm-6 center wow fadeInLeft">
+          <img class="img-responsive" src="img/about/support.svg" alt>
+        </div>
+        <div class="col-sm-6 wow fadeInRight">
+          <h1>Підтримка та Обслуговування</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
+          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
+        </div>
+
+        <!-- <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX" data-wow-delay='0.1s'>
+          <span class="features-icon website"></span>
+          <h1>Website design &amp; developer</h1>
+          <p>With a high-level creative standard, we enhance the user's experience with design that is meaningful and timeless.</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
+          <span class="features-icon maintenance"></span>
+          <h1>Administration</h1>
+          <p>We have the big experience in system administration. We specialize on Windows Server, Gnu/Linux, *BSD, and others </p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='30s'" data-wow-delay='0.1s'>
+          <span class="features-icon offshore"></span>
+          <h1>Web application development</h1>
+          <p>Utilizing the latest web technologies, we provide services in development of content-rich, database-driven web applications with easy to use interfaces that match your business needs.</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
+          <span class="features-icon pro"></span>
+          <h1>Logo, Brochure &amp; Graphic Design</h1>
+          <p>We create beautiful, clean and simple design that best represent your brand and which clearly communicates with your audience.</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
+          <span class="features-icon globe"></span>
+          <h1>Search engine optimization</h1>
+          <p>Our optimized coding practice helps web pages load faster and index better on search engine results like Google with the right keywords.</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
+          <span class="features-icon host"></span>
+          <h1>Domain &amp; hosting</h1>
+          <p>Based on our experience, we choose the most suitable, stable and reliable web hosting server that best fits the scale of your website.</p>
+        </div> -->
+      </div>
+    </div>
+    </div>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="background testimonials" style="background: url('img/background_winter_2-min.png') no-repeat center 0 fixed;" id="testimonials">
+      <h1>Відгуки наших постійних клієнтів</h1>
+
+      <div class="container">
+        <div class="row-full">
+          <div class="col-sm-12 testimonials-content">
+            <span class="quote"></span>
+            <ul id="imageGallery">
+
+              <li>
+                <h3>Дуже хороша команда з професійними вміннями. Ціна дуже низька, в той час як сам сайт виконаний шикарно. Сподобалося те, що всі іконки для сайту векторні. А вага сайту - лише 3.5 МБ. На таке нездатна жодна інша компанія, з якими мені доводилося колись співпрацювати.</h3>
+                <div class="line"></div>
+                <p>Max Naumchik. Founder TI-SOUL Inc &amp; CO-founder InDeLIO Inc.</p>
+              </li>
+
+              <li>
+                <h3>Я лишився задоволеним після співпраці з InDeLIO. Вони роблять в кілька разів більше за ціну, яку просять. Рекомендую бізнесменам, котрим потрібен хороший та якісний сайт, але не хочуть витрачатися багато на нього.</h3>
+                <div class="line"></div>
+                <p>Імя_поки_що_ще_не_придумав)</p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO-CONTAINER SECTION -->
+    <div class="container-fluid" id="portfolio" style="padding-left: 0; padding-right: 0">
+      <h1>Перегляньте наше портфоліо</h1>
+
+      <button class="filter active" data-filter="all">Всі</button>
+      <button class="filter" data-filter=".landing">Лендінг</button>
+      <button class="filter" data-filter=".blog">Блог</button>
+      <!-- <button class="sort" data-sort="random">Random</button> -->
+      
+
+      <br><br>
+      <div class="container">
+      <div class="row">
+
+        <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+          <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
+          <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
+        </a>
+
+        <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+          <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
+          <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
+        </a>
+
+        <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+          <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
+          <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
+        </a>
+
+        <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+          <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
+          <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
+        </a>
+
+        <!-- <a href="#" class="col-sm-3 mix elem-2 " data-myorder="2">
+          <div class="image"></div>
+        </a>
+        <a href="#" class="col-sm-3 mix elem-3 blog" data-myorder="3">
+          <div class="image"></div>
+        </a>
+        <a href="#" class="col-sm-3 mix elem-4" data-myorder="4">
+          <div class="image"></div>
+        </a>
+        
+        <a href="#" class="col-sm-3 mix elem-5 blog" data-myorder="5">
+          <div class="image"></div>
+        </a>
+        <a href="#" class="col-sm-3 mix elem-6 landing" data-myorder="6">
+          <div class="image"></div>
+        </a>
+        <a href="#" class="col-sm-3 mix elem-7" data-myorder="7">
+          <div class="image"></div>
+        </a>
+        <a href="#" class="col-sm-3 mix elem-8" data-myorder="8">
+          <div class="image"></div>
+        </a> -->
+      </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="container-full portfolio-container" name="portfolio">
+      <div class="row-full">
+        <div class="col-sm-12" style="text-transform: uppercase; padding: 60px 0; margin: 0">
+          <h1 style="margin: 0; padding: 0">Our portfolio</h1>
+    
+          <ul id="filters">
+            <li><span class="filter active" data-filter="logo web">Show All</span></li>
+            <li><span class="filter" data-filter="logo">Logo</span></li>
+            <li><span class="filter" data-filter="web">Web</span></li>
+          </ul>
+    
+       </div>
+      </div> -->
+
+      <!-- <div class="container">
+        <div class="row" id="portfoliolist" style="margin-bottom: 60px">
+      
+          <a class="col-xs-6 col-sm-4 col-lg-3 portfolio web" href="http://dev.orgplan.ru" target="_blank" data-cat="web">
+            <img src="img/portfolios/orgplan.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>Orgplan</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web logo" href="http://movewheels.com" target="_blank" data-cat="web logo">
+            <img src="img/portfolios/movewheels.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>Movewheels</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web logo" href="http://posilka.ua" target="_blank" data-cat="web logo">
+            <img src="img/portfolios/posilka.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>Posilka.ua</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web" href="http://bever.com.ua" target="_blank" data-cat="web">
+            <img src="img/portfolios/bever.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>Bever.com.ua</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web" href="http://svetola.ru" target="_bkank" data-cat="web">
+            <img src="img/portfolios/svetola.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>svetola.ru</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web" href="http://510001.astrawes.web.hosting-test.net/" target="_blank" data-cat="web">
+            <img src="img/portfolios/gallery.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>L'viv Gallery</span> Tiles title on hover
+          </a>
+      
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio logo" href="img/portfolios/legartice.png" target="_blank" data-cat="logo">
+            <img src="img/portfolios/legartice.png" alt> Background image for tile
+            <div></div> Tiles background on hover
+            <span>Legartice</span> Tiles title on hover
+          </a>
+      
+        </div> ./row
+      </div> ./container
+          </div> ./portfolio-container -->
+
+
+    <!-- COUNTER SECTION -->
+    <section class="background counter" style="background: url('img/background_winter_1-min.png') no-repeat center 0 fixed;" id="counter">
+      <h1 class="counter-title">Наші досягнення</h1>
+      <div class="container counter-container">
+        <div class="row-full">
+
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-finish"></span>
+            <h1 class="counter-numb">10</h1>
+            <p>Завершено проектів</p>
+          </div>
+
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-happy"></span>
+            <h1 class="counter-numb">10</h1>
+            <p>Задоволені клієнти</p>
+          </div>
+
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-coffee"></span>
+            <h1 class="counter-numb">85</h1>
+            <p>Випито чашок кави</p>
+          </div>
+
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-time"></span>
+            <h1 class="counter-numb">254</h1>
+            <p>Години роботи</p>
+          </div>
+
+        </div> <!-- ./row-full -->
+      </div> <!-- ./container -->
+    </section>
+
+
+<div class="container-fluid price" id="pricing">
+    <h1>Виберіть кращий для себе</h1>
+    <div class="container price-table">
+    <!-- Розкішний, креативний, продуманий дизайн з розумною маркетинговою політикою зацікавить будь-якого клієнта.
+    Ми використовуємо для кожного сайту анімації, паралакс ефекти, svg (векторні іконки), щоби створити, по правді, довершений сайт всього за $100, що є в 5-6 разів менше, ніж в конкурентів (при умові, що конкуренти зроблять роботу добросовісно, тому що переважно всім начхати на якість). -->
+      <p>Наша особливість полягає в тому, що ми створюємо повноцінний сайт (в основному лендінг), з якісним, продуманим та індивідуальним дизайном, який зацікавить будь якого клієнта. Кожен сайт адаптивний під мобільні пристрої, з анімаціями, класними ефектами (на кшталт паралакс). Крім того сторінки СЕО оптимізовані, що у результаті дозволить не платити не платити двічі (за написання коду та оптимізації цього коду). Ціна повноцінного сайту всього від $100</p>
+      <div class="row">
+
+        <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s">
+          <div class="table-elem">
+            <h2>Landing</h2>
+            <div class="price-title">
+              <span>$100</span>
+            </div>
+            <ul>
+              <li>Якість</li>
+              <li class="gray">Адаптивність, Кросбраузерність</li>
+              <li>Паралакс ефекти, Анімація</li>
+              <li class="gray">Сучасний, креативний дизайн</li>
+              <li>Лише SVG іконки</li>
+              <li class="gray">СЕО без зайвих доплат</li>
+              <li>Безкоштовно 2 тижні підтримки</li>
+            </ul>
+            <button class="price-button" data-type="Лендінг">Вибрати</button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="table-elem">
+            <h3>Багатосторінковий</h3>
+            <div class="price-title">
+              <span>$115<sup>*</sup></span>
+            </div>
+            <ul>
+              <li>Якість</li>
+              <li class="gray">Адаптивність, Кросбраузерність</li>
+              <li>Паралакс ефекти, Анімація</li>
+              <li class="gray">Сучасний, креативний дизайн</li>
+              <li>Лише SVG іконки</li>
+              <li class="gray">СЕО без зайвих доплат</li>
+              <li>Безкоштовно 2 тижні підтримки</li>
+            </ul>
+            <button class="price-button" data-type="Багатосторінковий">Вибрати</button>
+          </div>
+          
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s" data-wow-delay="0.6s">
+          <div class="table-elem">
+            <h2>Блог</h2>
+            <div class="price-title">
+              <span>$100<sup>*</sup></span>
+            </div>
+            <ul>
+              <li>Якість</li>
+              <li class="gray">Адаптивність, Кросбраузерність</li>
+              <li>Паралакс ефекти, Анімація</li>
+              <li class="gray">Сучасний, креативний дизайн</li>
+              <li>Лише SVG іконки</li>
+              <li class="gray">СЕО без зайвих доплат</li>
+              <li>Безкоштовно 2 тижні підтримки</li>
+            </ul>
+            <button class="price-button" data-type="Блог">Вибрати</button>
+          </div>
+          
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s" data-wow-delay="0.9s">
+          <div class="table-elem">
+            <h2>Custom</h2>
+            <div class="price-title">
+              <span>from $100</span>
+            </div>
+            <ul>
+              <li>Якість</li>
+              <li class="gray">Адаптивність, Кросбраузерність</li>
+              <li>Паралакс ефекти, Анімація</li>
+              <li class="gray">Сучасний, креативний дизайн</li>
+              <li>Лише SVG іконки</li>
+              <li class="gray">СЕО без зайвих доплат</li>
+              <li>Безкоштовно 2 тижні підтримки</li>
+            </ul>
+            <button class="price-button" data-type="За домовленістю">Вибрати</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+    <!-- FEEDBACK SECTION -->
+  <section class="background feedback-main" style="background: url('img/background_road-min.png') no-repeat center 0 fixed;" id="feedback">
+    <h1>Давайте співпрацювати разом</h1>
+    <form class="container feedback" action="mail.php" method="post" id="feedback" name="contact" style="position: relative">
+      <div class="row-full">
+        <div class="closeThis">
+          
+          <div class="col-sm-6 wow fadeInLeft">
+            <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" required>
+            <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" required>
+            <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" required>
+          </div>
+          <div class="col-sm-6 wow fadeInRight">
+            <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" required></textarea>
+          </div>
+          <div class="col-sm-12 feedback-submit">
+            <!-- <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button> -->
+            <a class="lnb" href="#" style="display: inline-block; width: 250px">
+              <span class="lnb-line lnb-line-left"></span>
+              <span class="lnb-line lnb-line-top"></span>
+              <span class="lnb-line lnb-line-right"></span>
+              <span class="lnb-line lnb-line-bottom"></span>
+              Надіслати нам
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thx Frame -->
+      <div class="thx">
+        <div class="thx-cont">
+          <h1>Дякую Вам.</h1>
+          <h3>Незабаром надішлем Вам відповідь :)</h3>
+        </div>
+      </div>
+
+    </form>
+    </section>
+
+    <!-- MAP SECTION -->
+    <!-- <section class="map">
+      <h2>Let's find us</h2>
+      <div id="map-canvas"></div>
+    </section> -->
+
+    <!-- FOOTER-TOP SECTION -->
+   <!--  <section class="footer-top">
+     <ul class="social-media wow zoomInUp">
+       <li><a href="https://vk.com/itsoulcompany" target="_blank"><img class="media-icon" src="img/vk.svg" alt></a></li>
+       <li><a href="http://fb.com" target="_blank"><img class="media-icon" src="img/fb.svg" alt></a></li>
+       <li><a href="http://twitter.com" target="_blank"><img class="media-icon" src="img/tw.svg" alt></a></li>
+       <li><a href="http://googleplus.com" target="_blank"><img class="media-icon" src="img/gp.svg" alt></a></li>
+     </ul>
+     <div class="wow slideInUp">
+     <a style="color: black" href="tel:+380637410361">+38 (063) 741 03 61</a>
+     <p style="display: inline">|</p>
+     <a style="color: black" href="tel:+380983716299">+38 (098) 371 62 99</a>
+     <a style="color: #CC9900; display: block" href="mailto:info@it-soul.com">example@indelio.com</a>
+   </div>
+   </section> -->
+
+    <!-- FOOTER-BOTTOM SECTION -->
+    <section class="footer-bottom">
+      <a style="color: white" href="tel:+380980784128">+38 (098) 078 41 28</a>
+      <p style="display: inline">|</p>
+      <a style="color: white" href="tel:+380500892300">+38 (050) 089 23 00</a>
+      <a style="color: #CC9900; display: block; margin-bottom: 30px" href="contact@indelio.com.ua">contact@indelio.com.ua</a>
+
+      <!-- <p class="wow slideInUp"style="color: #FFCC00">Made in Ukraine</p> -->
+      <!-- <h1 class="wow slideInUp">INDELIO</h1> -->
+      <p class="wow slideInUp">© 2015 Всі права захищені</p>
+    </section>
+  </div>
+
+</body>
+</html>

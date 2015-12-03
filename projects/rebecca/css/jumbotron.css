@@ -1,0 +1,41 @@
+/**
+ * @package css
+ * @author Svyatik Kovtun <barsic.plus@gmail.com>
+ * @license The Apache License, Version 2.0
+ * @copyright Copyright 2015 by Svyatoslav Kovtun
+ */
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+  background-image: url('../img/jumbotron-background.png');
+  border-radius: 0;
+  color: white;
+  height: 380px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/**
+ * @section jumbotron-black
+ * 50% transparent block for jumbotron
+ */
+.jumbotron-black {
+  background-color: rgba(0,0,0,.5);
+  height: 100%;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.jumbotron-logo {
+  background-image: url('/img/logo.png');
+  background-size: 100% 100%;
+  display: block;
+  height: 128px;
+  margin: 0 auto;
+  width: 128px;
+}
+
+.jumbotron-title {
+  font-family: 'Raleway', sans-serif;
+}
