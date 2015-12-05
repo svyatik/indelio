@@ -66,8 +66,9 @@ $ (document).ready (function () {
     });
 
     // -> Init the animation plugin
-    new WOW().init();
-
+    if($(document).width() > 770) {
+        new WOW().init();
+    }
 
     // .lnb buttons animation
     $('.lnb').on('mouseenter', function() {
@@ -201,17 +202,30 @@ $ (document).ready (function () {
     });
 
     $('.close-button').on('click', function() {
+        closeAlert();
+    });
+
+    $('.contact-form-close').on('click', function() {
+        closeAlert();
+    });
+
+    $(document).keydown(function(evt) {
+        if(evt.keyCode === 27) {
+            closeAlert();
+        }
+    });
+
+    function closeAlert() {
         $('.page-background').stop().animate({
             opacity: 0
         }, 500, function() {
             $(this).css('display', 'none')
         });
         $('.contact-form').animate({
-            top: '50%',
+            top: '250px',
             opacity: 0
         }, 500);
-    });
-
+    }
 
     // Init the testimonials
     $('#imageGallery').lightSlider({
@@ -223,8 +237,8 @@ $ (document).ready (function () {
     });
 
     // Submit Feedback
-    $ ('#feedback').on ('submit', function (e) {
-        $.ajax ({
+    $ ('#feedback').on ('click', function (e) { //on submit
+        /*$.ajax ({
             type: "Post",
             url: "mail.php",
             data: {
@@ -237,12 +251,14 @@ $ (document).ready (function () {
             cache: false,
             success: closeFeedback ()
         });
-        e.preventDefault ();
+        e.preventDefault ();*/
+        closeFeedback();
+        e.preventDefault ()
     });
 
     function closeFeedback () {
         $ ('.feedback-submit').on ('click', function (e) {
-            
+            $('.form_elem').addClass('hidden_form');
             $ ('.thx').css ('display', 'block');
             $ ('.thx').animate ({
                 height: '100%',

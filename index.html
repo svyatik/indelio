@@ -94,13 +94,15 @@ Written by InDeLIO info@indelio.com, November 2015
         <input class="form-control" id="feedEmail" type="email" placeholder="Ваш e-mail" tabindex="2" required>
         <input class="form-control" id="feedPhone" type="phone" placeholder="Ваш телефон" tabindex="3" required>
         <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" rows="6" placeholder="Якщо хочете, добавте коротеньке повідомлення" tabindex="4" required>Привіт.</textarea>
-        <a class="lnb close-button" style="display: inline-block; width: 250px">
-          <span class="lnb-line lnb-line-left"></span>
+        <button class="btn btn-default close-button" type="submit">
+        <!-- <a class="lnb close-button" style="display: inline-block; width: 250px"> -->
+          <!-- <span class="lnb-line lnb-line-left"></span>
           <span class="lnb-line lnb-line-top"></span>
           <span class="lnb-line lnb-line-right"></span>
-          <span class="lnb-line lnb-line-bottom"></span>
+          <span class="lnb-line lnb-line-bottom"></span> -->
           Надіслати нам
-        </a>
+        <!-- </a> -->
+        </button>
       </form>
     </div>
 
@@ -540,37 +542,37 @@ Written by InDeLIO info@indelio.com, November 2015
 
     <!-- FEEDBACK SECTION -->
   <section class="background feedback-main" style="background: url('img/background_road-min.png') no-repeat center 0 fixed;" id="feedback">
-    <h1>Давайте співпрацювати разом</h1>
+    <h1>Давайте будемо співпрацювати</h1>
     <form class="container feedback" action="mail.php" method="post" id="feedback" name="contact" style="position: relative">
       <div class="row-full">
-        <div class="closeThis">
+        <!-- <div class="closeThis"> -->
           
-          <div class="col-sm-6 wow fadeInLeft">
-            <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" required>
-            <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" required>
-            <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" required>
+          <div class="col-sm-6 form_elem wow fadeInLeft">
+            <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" >
+            <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" >
+            <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" >
           </div>
-          <div class="col-sm-6 wow fadeInRight">
-            <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" required></textarea>
+          <div class="col-sm-6 form_elem wow fadeInRight">
+            <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" ></textarea>
           </div>
-          <div class="col-sm-12 feedback-submit">
-            <!-- <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button> -->
-            <a class="lnb" href="#" style="display: inline-block; width: 250px">
+          <div class="col-sm-12 form_elem feedback-submit">
+            <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button>
+            <!-- <a class="lnb" id="feedback-submit" style="display: inline-block; width: 250px">
               <span class="lnb-line lnb-line-left"></span>
               <span class="lnb-line lnb-line-top"></span>
               <span class="lnb-line lnb-line-right"></span>
               <span class="lnb-line lnb-line-bottom"></span>
               Надіслати нам
-            </a>
+            </a> -->
           </div>
-        </div>
+        <!-- </div> -->
       </div>
 
       <!-- Thx Frame -->
       <div class="thx">
         <div class="thx-cont">
           <h1>Дякую Вам.</h1>
-          <h3>Незабаром надішлем Вам відповідь :)</h3>
+          <h3>Незабаром надішлем відповідь.</h3>
         </div>
       </div>
 
@@ -604,10 +606,7 @@ Written by InDeLIO info@indelio.com, November 2015
       <a style="color: white" href="tel:+380980784128">+38 (098) 078 41 28</a>
       <p style="display: inline">|</p>
       <a style="color: white" href="tel:+380500892300">+38 (050) 089 23 00</a>
-      <a style="color: #CC9900; display: block; margin-bottom: 30px" href="contact@indelio.com.ua">contact@indelio.com.ua</a>
-
-      <!-- <p class="wow slideInUp"style="color: #FFCC00">Made in Ukraine</p> -->
-      <!-- <h1 class="wow slideInUp">INDELIO</h1> -->
+      <a style="color: #CC9900; display: block; margin-bottom: 30px" href="mailto:contact@indelio.com.ua">contact@indelio.com.ua</a>
       <p class="wow slideInUp">© 2015 Всі права захищені</p>
     </section>
   </div>

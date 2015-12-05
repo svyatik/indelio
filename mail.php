@@ -8,7 +8,7 @@
     // Get Message from client
     $msg = $_REQUEST["msg"];
 
-    $to = 'yarema.aum@gmail.com';
+    $to = 'contact@indelio.com.ua';
     $subject = 'From Our Clients';
     $message = "<b>Name </b>: " . $name . "<br>" .
                 "<b>Email </b>" . $email . "<br>" .

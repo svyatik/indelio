@@ -21,6 +21,11 @@ body {
   padding: 0;
 }
 
+@media screen and (max-width: 770px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 
 /** NAVBAR STYLES **/
@@ -832,6 +837,12 @@ Feature desctiption
   padding-bottom: 30px;
 }
 
+.form_elem.hidden_form {
+  /*visibility: hidden !important;*/
+  opacity: 0;
+  transition: opacity .3s;
+}
+
 .feedback input,
 .feedback textarea {
   margin: 20px 0;
@@ -875,6 +886,14 @@ Feature desctiption
 
 .feedback-submit button {
   text-transform: uppercase;
+  border-radius: 0;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  transition: all .2s;
+  outline: none;
 }
 
 
@@ -888,14 +907,14 @@ Feature desctiption
   display: none;
   opacity: 0;
   height: 0;
-  background-color: white;
   text-align: center;
+  color: white;
 }
 
 .thx-cont {
   opacity: 0;
   position: relative;
-  margin-top: -62px;
+  margin-top: -80px;
 }
 
 
@@ -941,6 +960,7 @@ Feature desctiption
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
+  cursor: default;
 }
 
 
@@ -1132,15 +1152,21 @@ Feature desctiption
 }
 
 .contact-form {
-  width: 550px;
+  max-width: 550px;
+  width: 100%;
   background-color: #4A6DA7;
   /*padding: 10px;*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -275px;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-left: -275px;*/
   z-index: 101;
   opacity: 0;
+  margin: 0 auto;
+  /*margin-top: 150px;*/
+  /*top: 150px;*/
+  top: 250px;
+  position: relative;
 
   -webkit-box-shadow: 0px 0px 19px 2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 19px 2px rgba(0,0,0,0.75);
@@ -1167,6 +1193,7 @@ Feature desctiption
   background-image: url('../img/times.svg');
   background-size: 24px;
   float: right;
+  cursor: pointer;
 }
 
 .contact-form > form {
@@ -1182,8 +1209,22 @@ Feature desctiption
   margin: 5px 0;
 }
 
-.contact-form > form > a.lnb {
-  margin: 5px !important;
+.contact-form .close-button {
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  transition: all .2s;
+  outline: none;
+}
+
+.contact-form .close-button:hover {
+  color: #333;
+  background-color: white;
+  border: 3px solid #ccc;
 }
 
 
