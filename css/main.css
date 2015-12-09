@@ -13,7 +13,7 @@ header {
 }
 
 body {
-  /*overflow: hidden;*/
+  overflow-y: hidden;
 }
 
 * {
@@ -28,6 +28,22 @@ body {
 }
 
 
+.alert {
+  margin-top: 100px;
+  position: fixed;
+  margin-left: -100%;
+  opacity: 0;
+  transition: all .8s;
+  padding-right: 30px;
+  z-index: 999999
+}
+
+.alert.show {
+  margin-left: 0;
+  opacity: 1;
+}
+
+
 /** NAVBAR STYLES **/
 /*******************/
 /* navbar */
@@ -35,6 +51,7 @@ body {
   background-color: #303030 !important;
   border-color: transparent !important;
   transition: all .3s;
+  z-index: 999999;
 }
 
 .navbarStick {
@@ -1232,52 +1249,46 @@ Feature desctiption
 /** PRELOADER **/
 /***************/
 .preloader {
-  background-color: #708090;
+  background-color: #255974;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  -webkit-perspective: 1000;
-     -moz-perspective: 1000;
-          perspective: 1000;
+  z-index: 999;
 }
 
-.preloader-block {
-  width: 128px;
-  height: 128px;
-  z-index: 100;
+.preloader-circle {
   position: absolute;
-  top: 50%;
+  width: 72px;
+  height: 72px;
   left: 50%;
-  margin-left: -64px;
-  margin-top: -64px;
-  background-image: url('../img/logo.svg');
-  background-size: 128px;
-  background-position: center;
-  -webkit-animation: ANIMATION 2s infinite;
-     -moz-animation: ANIMATION 2s infinite;
-          animation: ANIMATION 2s infinite;
-}
-
-@-webkit-keyframes ANIMATION {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(-15deg); }
-  100% { transform: rotate(0deg); }
-}
-
-@-moz-keyframes ANIMATION {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(-15deg); }
-  100% { transform: rotate(0deg); }
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: ANIMATION 2s infinite;
 }
 
 @keyframes ANIMATION {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(-15deg); }
-  100% { transform: rotate(0deg); }
+  from {
+    width: 72px;
+    height: 72px;
+    margin-left: -36px;
+    margin-top: -36px;
+  }
+  50% {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+  to {
+    width: 72px;
+    height: 72px;
+    margin-left: -36px;
+    margin-top: -36px;
+  }
 }

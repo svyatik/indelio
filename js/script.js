@@ -6,7 +6,7 @@
  */
 
 // WEBSITE PRELOADER
-/*$ (window).load (function () {
+$ (window).load (function () {
 
     $ ('.preloader').delay (500).animate ({
         height: 0,
@@ -16,7 +16,7 @@
         $ ('body').css ('overflow-y', 'scroll');
     });
 
-});*/
+});
 
 // Run when document will ready
 $ (document).ready (function () {
@@ -61,9 +61,16 @@ $ (document).ready (function () {
     $('#portfolio').mixItUp();
 
     // -> Hide navbar on mobile after clicking
-    $('.navbar-collapse a').click(function (e) {
-        $('.navbar-collapse').collapse('toggle');
-    });
+    // $('.navbar-collapse a').click(function (e) {
+    //     $('.navbar-collapse').collapse('toggle');
+    // });
+
+    // Hide the navbar on mobile after a click
+    if($(document).width() < 770) {
+        $('.navbar-collapse a').click(function (e) {
+            $('.navbar-collapse').collapse('toggle');
+        });
+    }
 
     // -> Init the animation plugin
     if($(document).width() > 770) {
@@ -142,7 +149,7 @@ $ (document).ready (function () {
                 $('#myNavbar li').removeClass("active");
                 currLink.parent().addClass("active");
             }
-            else{
+            else {
                 currLink.parent().removeClass("active");
             }
         });
@@ -201,7 +208,16 @@ $ (document).ready (function () {
         }, 500);
     });
 
-    $('.close-button').on('click', function() {
+    $('#contact-form').on('submit', function(e) {
+        var data = {
+           name: $('#contact-form').find( "input[name='feedName']").val(),
+           email: $('#contact-form').find( "input[name='feedEmail']").val(),
+           phone: $('#contact-form').find( "input[name='feedPhone']").val(),
+           type: $('.contact-form-title').text(),
+           msg: $('#contact-form').find( "textarea").val(),
+        };
+        sendFeedback(data)
+        e.preventDefault();
         closeAlert();
     });
 
@@ -236,24 +252,58 @@ $ (document).ready (function () {
         controls: false
     });
 
+    function showAllert(title, body, type) {
+        type = typeof type !== 'undefined' ?  type : "alert-info";
+
+        $('.alert').find('strong').text(title);
+        $('.alert').find('span').text(" "+body);
+        $('.alert').addClass(type);
+
+        $('.alert').addClass('show');
+        setTimeout(function() {
+            $('.alert').removeClass('show');
+            $('.alert').removeClass(type);
+        },4000);
+    }
+
+    $('.alert').find('.close').on('click', function(e) {
+        $('.alert').removeClass('show');
+        e.preventDefault();
+    });
+
+    function sendFeedback(data) {
+        $.ajax ({
+            type: "Post",
+            url: "mail.php",
+            data: data,
+            async: true,
+            cache: false,
+            success: function() {
+                showAllert("Дякуємо!", "Ми отримали Ваше повідомлення.", "alert-success");
+            },
+            error: function() {
+                showAllert("Упс!", "Сталася помилка. Попробуйте, будь ласка, ще раз.", "alert-danger");
+            }
+        });
+    }
+
     // Submit Feedback
-    $ ('#feedback').on ('click', function (e) { //on submit
-        /*$.ajax ({
+    $ ('#feedback').on ('submit', function (e) {
+        var $message = $('#feedback').find( "textarea").val();
+        $.ajax ({
             type: "Post",
             url: "mail.php",
             data: {
-               name: $ ('#feedName').val (),
-               email: $ ('#feedEmail').val (),
-               phone: $ ('#feedPhone').val (),
-               msg: $ ('#feedMsg').val ()
+               name: $('#feedback').find( "input[name='name']").val(),
+               email: $('#feedback').find( "input[name='email']").val(),
+               phone: $('#feedback').find( "input[name='phone']").val(),
+               msg: $message
             },
             async: true,
             cache: false,
             success: closeFeedback ()
         });
-        e.preventDefault ();*/
-        closeFeedback();
-        e.preventDefault ()
+        e.preventDefault ();
     });
 
     function closeFeedback () {

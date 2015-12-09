@@ -10,9 +10,8 @@ Written by InDeLIO info@indelio.com, November 2015
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The New, Modern It Company">
-  <meta name="keywords" content="website design, website developer, administration, application development, logo design, brochure design,
-  seo, hosting, linux, windows, php, javascript, js, html, css, mysql, wordpress, joomla">
+  <meta name="description" content="Створення, просування та обслуговування веб-сайтів">
+  <meta name="keywords" content="InDeLIO, сайт, веб-розробка, веб-програмування, дизайн, лендінг, landing, блог, багатосторінковий, сео, просування">
   <meta name="author" content="InDeLIO">
 
   <title>InDeLIO</title>
@@ -77,10 +76,15 @@ Written by InDeLIO info@indelio.com, November 2015
 <body>
 
   <!-- WEBSITE PRELOADER -->
-  <!-- Shows an animation until the site is not completely loaded -->
-  <!-- <div class="preloader">
-    <div class="preloader-block"></div>
-  </div> -->
+  <div class="preloader">
+    <div class="preloader-circle"></div>
+  </div>
+
+  <div class="alert alert-success">
+    <a href="#" class="close">&times;</a>
+    <strong>Дякуємо!</strong>
+    <span> Ми отримали Ваше повідомлення.</span>
+  </div>
 
   <div class="page-background">
 
@@ -89,20 +93,12 @@ Written by InDeLIO info@indelio.com, November 2015
         <span class="contact-form-title"></span>
         <span class="contact-form-close"></span>
       </h3>
-      <form action="mail.php">
-        <input class="form-control" id="feedName" type="text" placeholder="Ваше ім’я" tabindex="1" required>
-        <input class="form-control" id="feedEmail" type="email" placeholder="Ваш e-mail" tabindex="2" required>
-        <input class="form-control" id="feedPhone" type="phone" placeholder="Ваш телефон" tabindex="3" required>
-        <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" rows="6" placeholder="Якщо хочете, добавте коротеньке повідомлення" tabindex="4" required>Привіт.</textarea>
-        <button class="btn btn-default close-button" type="submit">
-        <!-- <a class="lnb close-button" style="display: inline-block; width: 250px"> -->
-          <!-- <span class="lnb-line lnb-line-left"></span>
-          <span class="lnb-line lnb-line-top"></span>
-          <span class="lnb-line lnb-line-right"></span>
-          <span class="lnb-line lnb-line-bottom"></span> -->
-          Надіслати нам
-        <!-- </a> -->
-        </button>
+      <form id="contact-form" action="mail.php" method="POST">
+        <input class="form-control" id="feedName" name="feedName" type="text" placeholder="Ваше ім’я" tabindex="1" required>
+        <input class="form-control" id="feedEmail" name="feedEmail" type="email" placeholder="Ваш e-mail" tabindex="2" required>
+        <input class="form-control" id="feedPhone" name="feedPhone" type="phone" placeholder="Ваш телефон" tabindex="3" required>
+        <textarea class="form-control" id="feedMsg" name="feedMsg" style="width: 100%; height: 100%" rows="6" placeholder="Якщо хочете, добавте коротеньке повідомлення" tabindex="4" required>Привіт.</textarea>
+        <button class="btn btn-default close-button" type="submit">Надіслати нам</button>
       </form>
     </div>
 
@@ -121,11 +117,10 @@ Written by InDeLIO info@indelio.com, November 2015
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li class="active"><a href="#home">Home</a></li> -->
           <li class="active"><a href="#features">Про нас</a></li>
           <li><a href="#testimonials">Відгуки</a></li>
           <li><a href="#portfolio">Портфоліо</a></li>
-          <!-- <li><a href="#counter">Діяльність</a></li> -->
+          <li><a href="#counter">Статистика</a></li>
           <li><a href="#pricing">Ціни</a></li>
           <li><a href="#feedback">Зв'язок</a></li>
         </ul>
@@ -137,12 +132,12 @@ Written by InDeLIO info@indelio.com, November 2015
   <!-- WEBSITE HOME SECTION -->
   <section class="background website-header" style="background: url('img/background-min.png') no-repeat center 0 fixed; position: relative" id="home">
     <div class="header-text">
-      <img class="wow bounceInDown" src="img/logo_text.svg" alt>
-      <h1 class="header-title wow bounceInDown">Ми робимо інакше! Ми робимо краще!</h1>
+      <img class="wow bounceInDown" src="img/logo_text.svg" alt data-wow-delay="1s">
+      <h1 class="header-title wow bounceInDown" data-wow-delay="1s">Створюємо сучасні сайти за нормальні ціни</h1>
       <div class="container header-button-container" style="max-width: 1000px !important;">
         <div class="row">
 
-          <div class="col-sm-4 header-button wow bounceInUp">
+          <div class="col-sm-4 header-button wow bounceInUp" data-wow-delay="1s">
             <img src="img/rocket.svg" alt>
             <a class="lnb" href="#features">
               <span class="lnb-line lnb-line-left"></span>
@@ -153,7 +148,7 @@ Written by InDeLIO info@indelio.com, November 2015
             </a>
           </div>
 
-          <div class="col-sm-4 header-button wow bounceInUp">
+          <div class="col-sm-4 header-button wow bounceInUp" data-wow-delay="1s">
             <img src="img/diamond.svg" alt>
             <a class="lnb" href="#portfolio">
               <span class="lnb-line lnb-line-left"></span>
@@ -164,7 +159,7 @@ Written by InDeLIO info@indelio.com, November 2015
             </a>
           </div>
 
-          <div class="col-sm-4 header-button wow bounceInUp">
+          <div class="col-sm-4 header-button wow bounceInUp" data-wow-delay="1s">
             <img src="img/map.svg" alt>
             <a class="lnb" href="#feedback">
               <span class="lnb-line lnb-line-left"></span>
@@ -176,87 +171,44 @@ Written by InDeLIO info@indelio.com, November 2015
           </div>
         </div>
       </div>
-
-      <!-- <h1 class="header-title wow fadeInDown" data-wow-delay="1s">it-soul</h1>
-      <h2 class="wow fadeInDown" data-wow-delay="1s">The New, Modern It Company</h2>
-      <div class="line"></div>
-      <h3 class="header-about wow fadeInUp" data-wow-delay="1s">
-        <span>We are an offshore software development company from the heart of Lviv.</span>
-        <span>We create outstanding websites, creative concepts, user-friendly software and vibrant identities</span>
-      </h3> -->
-      <!-- <a class="it wow fadeInUp" data-wow-delay="1s" href="#contact">CONTACT WITH US</a> -->
     </div>
-    <!-- <a class="arrow" href="#features"></a> -->
   </section>
 
   <div>
-    <!-- <h2 class="start">The new age in The site building</h2> -->
-<div class="container-fluid features-fluid" id="features">
-  <h1>The new age in the site building</h1>
-    <div class="container features">
-      <div class="row-full">
+  <div class="container-fluid features-fluid" id="features">
+    <h1>Детальніше про нас</h1>
+      <div class="container features">
+        <div class="row-full">
 
-        <div class="col-sm-6 center wow fadeInLeft">
-          <img class="img-responsive" src="img/about/website_design.svg" alt>
-        </div>
-        <div class="col-sm-6 wow fadeInRight">
-          <h1>Створення сайтів</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
-          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
-        </div>
+          <div class="col-sm-6 center wow fadeInLeft">
+            <img class="img-responsive" src="img/about/website_design.svg" alt>
+          </div>
+          <div class="col-sm-6 wow fadeInRight">
+            <h1>Створення сайтів</h1>
+            <p style="text-align: left">Основне наше завдання, це реалізувати довершений, сучасний сайт для наших клієнтів. В основному ми реалізуємо сайти в стилі лендінг, багатосторінкові або типу блог. Перевагою в нас є креативний, сучасний дизайн, який повністю відповідає Вашому типу бізнесу. Включене СЕО без зайвих доплат, сучасна анімація, лише векторні (якісні) іконки та багато іншого за ціною лише в $100</p>
+          </div>
 
 
-        <div class="col-sm-6 col-md-push-6 center wow fadeInRight">
-          <img class="img-responsive" src="https://foxxr.com/wp-content/uploads/2012/09/best-seo-agencies-awards.png" alt>
-        </div>
-        <div class="col-sm-6 col-md-pull-6 wow fadeInLeft">
-          <h1>СЕО та Просування</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
-          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
-        </div>
+          <div class="col-sm-6 col-md-push-6 center wow fadeInRight">
+            <img class="img-responsive" src="https://foxxr.com/wp-content/uploads/2012/09/best-seo-agencies-awards.png" alt>
+          </div>
+          <div class="col-sm-6 col-md-pull-6 wow fadeInLeft">
+            <h1>СЕО та Просування</h1>
+            <p style="text-align: left">СЕО — це основа сучасних сайтів. Саме тому сторінки наших сайтів відразу пишуться оптимізованими.</p>
+            <p style="text-align: left">А за розумну ціну ми можемо Вам запропонувати розумне просування сайтів, для якого, в основному використовується контекстна реклама, особливо в лендінгах.</p>
+          </div>
 
 
-        <div class="col-sm-6 center wow fadeInLeft">
-          <img class="img-responsive" src="img/about/support.svg" alt>
+          <div class="col-sm-6 center wow fadeInLeft">
+            <img class="img-responsive" src="img/about/support.svg" alt>
+          </div>
+          <div class="col-sm-6 wow fadeInRight">
+            <h1>Підтримка та Обслуговування</h1>
+            <p style="text-align: left">Коли сайт готовий, ми налаштовуємо його на хостингу, реєструємо бізнес пошту (в стилі info@company.com) та, при потребі, надаємо необхідні консультації.</p>
+            <p style="text-align: left">Також ми можемо домовитися про обслуговування сайту за договірними цінами.</p>
+          </div>
         </div>
-        <div class="col-sm-6 wow fadeInRight">
-          <h1>Підтримка та Обслуговування</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo augue, convallis in nunc in, auctor feugiat enim. Phasellus dignissim sed elit commodo tincidunt. Sed pellentesque ac lorem quis feugiat. Etiam volutpat elit tincidunt quam iaculis, eget aliquet eros gravida. Aenean sed urna eget tellus tempus auctor quis sit amet est. Sed eu posuere felis.</p>
-          <p>Sed tincidunt, sapien sed elementum rutrum, ante metus auctor lectus, ac egestas tortor nibh vitae nisi. Donec finibus lorem nec lectus commodo, nec luctus odio aliquam. Proin luctus lacinia vestibulum. Nam consequat nisl id convallis mattis.</p>
-        </div>
-
-        <!-- <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX" data-wow-delay='0.1s'>
-          <span class="features-icon website"></span>
-          <h1>Website design &amp; developer</h1>
-          <p>With a high-level creative standard, we enhance the user's experience with design that is meaningful and timeless.</p>
-        </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
-          <span class="features-icon maintenance"></span>
-          <h1>Administration</h1>
-          <p>We have the big experience in system administration. We specialize on Windows Server, Gnu/Linux, *BSD, and others </p>
-        </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='30s'" data-wow-delay='0.1s'>
-          <span class="features-icon offshore"></span>
-          <h1>Web application development</h1>
-          <p>Utilizing the latest web technologies, we provide services in development of content-rich, database-driven web applications with easy to use interfaces that match your business needs.</p>
-        </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
-          <span class="features-icon pro"></span>
-          <h1>Logo, Brochure &amp; Graphic Design</h1>
-          <p>We create beautiful, clean and simple design that best represent your brand and which clearly communicates with your audience.</p>
-        </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
-          <span class="features-icon globe"></span>
-          <h1>Search engine optimization</h1>
-          <p>Our optimized coding practice helps web pages load faster and index better on search engine results like Google with the right keywords.</p>
-        </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
-          <span class="features-icon host"></span>
-          <h1>Domain &amp; hosting</h1>
-          <p>Based on our experience, we choose the most suitable, stable and reliable web hosting server that best fits the scale of your website.</p>
-        </div> -->
       </div>
-    </div>
     </div>
 
     <!-- TESTIMONIALS SECTION -->
@@ -296,56 +248,32 @@ Written by InDeLIO info@indelio.com, November 2015
       <button class="filter active" data-filter="all">Всі</button>
       <button class="filter" data-filter=".landing">Лендінг</button>
       <button class="filter" data-filter=".blog">Блог</button>
-      <!-- <button class="sort" data-sort="random">Random</button> -->
-      
 
       <br><br>
       <div class="container">
-      <div class="row">
+        <div class="row">
 
-        <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
-          <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
-          <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
-        </a>
+          <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+            <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
+            <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
+          </a>
 
-        <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
-          <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
-          <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
-        </a>
+          <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+            <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
+            <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
+          </a>
 
-        <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
-          <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
-          <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
-        </a>
+          <a href="http://wedstories.tk" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+            <img class="hover-image img-responsive" src="img/portfolios/wedstories.png" alt>
+            <span class="hover-background"><p class="hover-background-title">WEDSTORIES</p></span>
+          </a>
 
-        <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
-          <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
-          <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
-        </a>
+          <a href="/projects/rebecca/" target="_blank" class="col-sm-3 mix elem-1 landing" data-myorder="1">
+            <img class="hover-image img-responsive" src="img/portfolios/rebecca.png" alt>
+            <span class="hover-background"><p class="hover-background-title">REBECCA</p></span>
+          </a>
 
-        <!-- <a href="#" class="col-sm-3 mix elem-2 " data-myorder="2">
-          <div class="image"></div>
-        </a>
-        <a href="#" class="col-sm-3 mix elem-3 blog" data-myorder="3">
-          <div class="image"></div>
-        </a>
-        <a href="#" class="col-sm-3 mix elem-4" data-myorder="4">
-          <div class="image"></div>
-        </a>
-        
-        <a href="#" class="col-sm-3 mix elem-5 blog" data-myorder="5">
-          <div class="image"></div>
-        </a>
-        <a href="#" class="col-sm-3 mix elem-6 landing" data-myorder="6">
-          <div class="image"></div>
-        </a>
-        <a href="#" class="col-sm-3 mix elem-7" data-myorder="7">
-          <div class="image"></div>
-        </a>
-        <a href="#" class="col-sm-3 mix elem-8" data-myorder="8">
-          <div class="image"></div>
-        </a> -->
-      </div>
+        </div>
       </div>
     </div>
 
@@ -478,7 +406,7 @@ Written by InDeLIO info@indelio.com, November 2015
 
         <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s" data-wow-delay="0.3s">
           <div class="table-elem">
-            <h3>Багатосторінковий</h3>
+            <h2>MultiPage</h2>
             <div class="price-title">
               <span>$115<sup>*</sup></span>
             </div>
@@ -498,7 +426,7 @@ Written by InDeLIO info@indelio.com, November 2015
 
         <div class="col-sm-12 col-md-6 col-lg-3 wow flipInY" data-wow-duration="1s" data-wow-delay="0.6s">
           <div class="table-elem">
-            <h2>Блог</h2>
+            <h2>Blog</h2>
             <div class="price-title">
               <span>$100<sup>*</sup></span>
             </div>
@@ -545,27 +473,17 @@ Written by InDeLIO info@indelio.com, November 2015
     <h1>Давайте будемо співпрацювати</h1>
     <form class="container feedback" action="mail.php" method="post" id="feedback" name="contact" style="position: relative">
       <div class="row-full">
-        <!-- <div class="closeThis"> -->
-          
-          <div class="col-sm-6 form_elem wow fadeInLeft">
-            <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" >
-            <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" >
-            <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" >
-          </div>
-          <div class="col-sm-6 form_elem wow fadeInRight">
-            <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" ></textarea>
-          </div>
-          <div class="col-sm-12 form_elem feedback-submit">
-            <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button>
-            <!-- <a class="lnb" id="feedback-submit" style="display: inline-block; width: 250px">
-              <span class="lnb-line lnb-line-left"></span>
-              <span class="lnb-line lnb-line-top"></span>
-              <span class="lnb-line lnb-line-right"></span>
-              <span class="lnb-line lnb-line-bottom"></span>
-              Надіслати нам
-            </a> -->
-          </div>
-        <!-- </div> -->
+        <div class="col-sm-6 form_elem wow fadeInLeft">
+          <input class="form-control" id="feedName" type="text" placeholder="Ім’я" tabindex="1" name="name" required>
+          <input class="form-control" id="feedEmail" type="email" placeholder="E-mail" tabindex="2" name="email" required>
+          <input class="form-control" id="feedPhone" type="phone" placeholder="Телефон" tabindex="3" name="phone" required>
+        </div>
+        <div class="col-sm-6 form_elem wow fadeInRight">
+          <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%; white-space: pre-wrap;" placeholder="Повідомлення" tabindex="4" required></textarea>
+        </div>
+        <div class="col-sm-12 form_elem feedback-submit">
+          <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Відправити</button>
+        </div>
       </div>
 
       <!-- Thx Frame -->
@@ -602,11 +520,14 @@ Written by InDeLIO info@indelio.com, November 2015
    </section> -->
 
     <!-- FOOTER-BOTTOM SECTION -->
-    <section class="footer-bottom">
-      <a style="color: white" href="tel:+380980784128">+38 (098) 078 41 28</a>
+    <section class="footer-bottom" itemscope itemtype="http://schema.org/Organization">
+      <h3 itemprop="name">InDeLIO</h3>
+      <!-- <h3 itemprop="address">InDeLIO</h3> -->
+      <a style="color: white" href="tel:+380980784128" itemprop="telephone">+38 (098) 078 41 28</a>
       <p style="display: inline">|</p>
-      <a style="color: white" href="tel:+380500892300">+38 (050) 089 23 00</a>
-      <a style="color: #CC9900; display: block; margin-bottom: 30px" href="mailto:contact@indelio.com.ua">contact@indelio.com.ua</a>
+      <a style="color: white" href="tel:+380500892300" itemprop="telephone">+38 (050) 089 23 00</a>
+      <a style="color: #CC9900; display: block; margin-bottom: 30px" href="mailto:contact@indelio.com.ua" itemprop="email">contact@indelio.com.ua</a>
+      <!-- <p>Розташовані у Львові</p> -->
       <p class="wow slideInUp">© 2015 Всі права захищені</p>
     </section>
   </div>
